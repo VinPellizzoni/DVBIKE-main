@@ -6,6 +6,126 @@ session_start();
 <html lang="pt-br">
 
 <head>
+    
+    <style>
+body {
+    min-height: 100vh; /* Ensure body is at least viewport height */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #171C20;
+    background-image: url('../img/FUNDODV.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex-grow: 1; /* Allow main content to grow and push footer down */
+}
+
+p {
+    color: #FFFFFF;
+}
+
+header,
+footer {
+    color: #FFFFFF;
+    background-color: #171C20;
+    height: fit-content; /* Keep your fixed footer height if desired */
+    min-height: 100px;
+    width: 100%;
+    /* Remove position: absolute and bottom: 0 from footer */
+}
+/* Remove or adjust your existing footer styles that conflict */
+footer {
+    /* position: absolute; */ /* Remove this */
+    /* margin-top: auto; */ /* Remove this */
+    /* bottom: 0; */ /* Remove this */
+    /* Keep other desired footer styles like background, color, height, width */
+}
+
+.titulo {
+    justify-self: center;
+    font-size: 70px;
+    color: #FFFFFF;
+    width: 300px;
+}
+
+.logo {
+    position: relative; /* Be cautious with absolute positioning inside a flex container, might need adjustment */
+    left: 10%;
+    margin-right: auto;
+}
+
+.entrar,
+.cadastrar,
+.operacoes {
+    width: 200px;
+    font-size: 12px;
+    margin-left: auto;
+    right: 0; /* This 'right: 0' coupled with absolute positioning might need review */
+    background-color: #CDCDCD;
+}
+
+.tabela {
+    position: absolute; /* This absolute positioning might need review in the new layout */
+    bottom: 0;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+}
+
+#textos,
+.quemsomos,
+.pedaleconosco,
+.testemunhos {
+    color: #FFFFFF;
+    font-size: 16px;
+    /* height: 25%; */ /* Percentage heights can be tricky in flex column, consider padding/margins instead */
+    background-color: #171C20;
+    align-items: center;
+    margin: 1%;
+}
+
+.container {
+    background-color: #171C20;
+    padding: 20px;
+}
+
+.testemunhos {
+    background-color: #171C20;
+    position: relative;
+    margin: 1%;
+}
+
+.produto {
+    width: 200px;
+}
+
+
+.carousel {
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+}
+
+#botoes {
+    align-self: center;
+}
+
+    .footer2{
+        position: relative;
+        margin-top: auto;
+        bottom: 0;
+    }
+
+    </style>
     <title>DV Bikes - Cadastro</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />

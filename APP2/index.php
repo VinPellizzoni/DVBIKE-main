@@ -6,7 +6,8 @@ session_start();
 <html lang="en">
 
 <head>
-    <style></style>
+    <style>
+    </style>
     <link href="estilos/reset.css" rel="stylesheet">
     <link href="estilos/estilo.css" rel="stylesheet">
     <!-- Meta tags Obrigatórias -->
@@ -42,6 +43,7 @@ session_start();
         </div>
     </header>
     <main>
+        <div class="container-fluid">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -71,6 +73,7 @@ session_start();
                 <span class="sr-only">Próximo</span>
             </a>
         </div>
+</div>
 
         <div class="container-fluid">
             <div class="row" id="textos">
