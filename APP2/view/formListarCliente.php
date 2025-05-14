@@ -14,21 +14,145 @@ session_start();
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
+        
+        form {
+            background-color: #171C20;
+            color: #FFFFFF;
         }
-        body {
-            background-image: url('../img/FUNDODV.webp');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
         }
-        .container {
-            background-color: transparent;
-            padding: 20px;
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #393e46;
+            border-radius: 4px;
+            background-color: #222831;
+            color: #eeeeee;
         }
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #6c757d;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #6c757d;
+        }
+
+
+
+html {
+    background-color: #171C20;
+}
+
+body {
+    background-image: url('../img/FUNDODV.webp');
+    background-size: cover;
+    background-color: #171C20;
+    min-height: 100vh; /* Ensure body is at least viewport height */
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    margin: 0; /* Remove default body margin */
+}
+main {
+    flex-grow: 1; /* Allow main content to grow and push footer down */
+}
+
+p {
+    color: #FFFFFF;
+}
+
+header,
+footer {
+    color: #FFFFFF;
+    background-color: #171C20;
+    width: 100%;
+}
+.titulo {
+    justify-self: center;
+    font-size: 70px;
+    color: #FFFFFF;
+    width: 300px;
+}
+
+.logo {
+    position: relative; /* Be cautious with absolute positioning inside a flex container, might need adjustment */
+    left: 10%;
+    margin-right: auto;
+}
+
+.entrar,
+.cadastrar,
+.operacoes {
+    width: 200px;
+    font-size: 12px;
+    margin-left: auto;
+    right: 0; /* This 'right: 0' coupled with absolute positioning might need review */
+    background-color: #CDCDCD;
+}
+
+.tabela {
+    position: absolute; /* This absolute positioning might need review in the new layout */
+    bottom: 0;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+}
+
+#textos,
+.quemsomos,
+.pedaleconosco,
+.testemunhos {
+    color: #FFFFFF;
+    font-size: 16px;
+    /* height: 25%; */ /* Percentage heights can be tricky in flex column, consider padding/margins instead */
+    background-color: #171C20;
+    align-items: center;
+    margin: 1%;
+}
+
+.container {
+    background-color: #171C20;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.testemunhos {
+    background-color: #171C20;
+    position: relative;
+    margin: 1%;
+}
+
+.produto {
+    width: 200px;
+}
+
+
+.carousel {
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+}
+
+#botoes {
+    align-self: center;
+}
+
+    .footer2{
+        position: relative;
+        margin-top: auto;
+        bottom: 0;
+    }
         table {
             border-collapse: collapse;
             width: 100%;
@@ -36,28 +160,33 @@ session_start();
             background-color: #222831;
             color: #eeeeee;
         }
-        th, td {
+
+        th,
+        td {
             border: 1px solid #393e46;
             padding: 10px;
             text-align: left;
         }
+
         th {
             background-color: #6c757d;
         }
+
         tr:nth-child(even) {
             background-color: #393e46;
         }
-        button.action-btn {
+
+        a.action-link {
             background-color: #6c757d;
-            border: none;
             color: white;
             padding: 6px 12px;
             margin-right: 5px;
-            cursor: pointer;
+            text-decoration: none;
             border-radius: 4px;
             font-size: 14px;
         }
-        button.action-btn:hover {
+
+        a.action-link:hover {
             background-color: #6c757d;
         }
     </style>
@@ -94,8 +223,10 @@ session_start();
             </div>
         </div>
     </header>
+    <main>
     
 <div class="container">
+    <h2 class="text-light">Clientes Cadastrados</h2>
 <?php
     include("../controller/clientecontroller.php");
     $res = clientecontroller::listarClientes();
@@ -105,7 +236,6 @@ session_start();
         print "<tr>";
         print "<th>#</th>";
         print "<th>Nome</th>";
-        print "<th>Senha</th>";
         print "<th>CPF</th>";
         print "<th>Endereço</th>";
         print "<th>Telefone</th>";
@@ -116,7 +246,6 @@ session_start();
             print "<tr>";
             print "<td>".$row->idCli."</td>";
             print "<td>".$row->nomeCli."</td>";
-            print "<td>".$row->senhaCli."</td>";
             print "<td>".$row->cpfCli."</td>";
             print "<td>".$row->enderecoCli."</td>";
             print "<td>".$row->telefoneCli."</td>";
@@ -135,6 +264,7 @@ session_start();
     }
 ?>
 </div>
+</main>
 <footer class="footer">
         <div class="container-fluid">
             <div class="row">

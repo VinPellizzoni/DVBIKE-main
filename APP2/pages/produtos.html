@@ -16,7 +16,6 @@ body {
     flex-direction: column; /* Stack children vertically */
     margin: 0; /* Remove default body margin */
 }
-
 main {
     flex-grow: 1; /* Allow main content to grow and push footer down */
 }
@@ -29,19 +28,8 @@ header,
 footer {
     color: #FFFFFF;
     background-color: #171C20;
-    height: 100px; /* Keep your fixed footer height if desired */
     width: 100%;
-    /* Remove position: absolute and bottom: 0 from footer */
 }
-
-/* Remove or adjust your existing footer styles that conflict */
-footer {
-    /* position: absolute; */ /* Remove this */
-    /* margin-top: auto; */ /* Remove this */
-    /* bottom: 0; */ /* Remove this */
-    /* Keep other desired footer styles like background, color, height, width */
-}
-
 .titulo {
     justify-self: center;
     font-size: 70px;
@@ -50,7 +38,7 @@ footer {
 }
 
 .logo {
-    position: absolute; /* Be cautious with absolute positioning inside a flex container, might need adjustment */
+    position: relative; /* Be cautious with absolute positioning inside a flex container, might need adjustment */
     left: 10%;
     margin-right: auto;
 }
@@ -102,11 +90,6 @@ footer {
     width: 200px;
 }
 
-.footer2 {
-    position: relative;
-    margin-top: auto;
-    bottom: 0;
-}
 
 .carousel {
     justify-self: center;
@@ -117,6 +100,13 @@ footer {
 #botoes {
     align-self: center;
 }
+
+    .footer2{
+        position: relative;
+        margin-top: auto;
+        bottom: 0;
+    }
+
 	</style>
 	<link href="../estilos/estilo.css" rel="stylesheet">
 	<link href="../estilos/reset.css" rel="stylesheet">

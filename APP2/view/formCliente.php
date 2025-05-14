@@ -11,23 +11,9 @@ session_start();
     <link rel="stylesheet" href="../estilos/reset.css">
     <link rel="stylesheet" href="../estilos/estilo.css">
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-image: url('../img/FUNDODV.webp');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+        
         form {
-            max-width: 500px;
-            margin: 20px auto;
             background-color: #171C20;
-            padding: 20px;
-            border-radius: 8px;
             color: #FFFFFF;
         }
         label {
@@ -57,6 +43,112 @@ session_start();
         input[type="submit"]:hover {
             background-color: #6c757d;
         }
+
+
+
+html {
+    background-color: #171C20;
+}
+
+body {
+    background-image: url('../img/FUNDODV.webp');
+    background-size: cover;
+    background-color: #171C20;
+    min-height: 100vh; /* Ensure body is at least viewport height */
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    margin: 0; /* Remove default body margin */
+}
+main {
+    flex-grow: 1; /* Allow main content to grow and push footer down */
+}
+
+p {
+    color: #FFFFFF;
+}
+
+header,
+footer {
+    color: #FFFFFF;
+    background-color: #171C20;
+    width: 100%;
+}
+.titulo {
+    justify-self: center;
+    font-size: 70px;
+    color: #FFFFFF;
+    width: 300px;
+}
+
+.logo {
+    position: relative; /* Be cautious with absolute positioning inside a flex container, might need adjustment */
+    left: 10%;
+    margin-right: auto;
+}
+
+.entrar,
+.cadastrar,
+.operacoes {
+    width: 200px;
+    font-size: 12px;
+    margin-left: auto;
+    right: 0; /* This 'right: 0' coupled with absolute positioning might need review */
+    background-color: #CDCDCD;
+}
+
+.tabela {
+    position: absolute; /* This absolute positioning might need review in the new layout */
+    bottom: 0;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+}
+
+#textos,
+.quemsomos,
+.pedaleconosco,
+.testemunhos {
+    color: #FFFFFF;
+    font-size: 16px;
+    /* height: 25%; */ /* Percentage heights can be tricky in flex column, consider padding/margins instead */
+    background-color: #171C20;
+    align-items: center;
+    margin: 1%;
+}
+
+.container {
+    background-color: #171C20;
+    padding: 20px;
+}
+
+.testemunhos {
+    background-color: #171C20;
+    position: relative;
+    margin: 1%;
+}
+
+.produto {
+    width: 200px;
+}
+
+
+.carousel {
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+}
+
+#botoes {
+    align-self: center;
+}
+
+    .footer2{
+        position: relative;
+        margin-top: auto;
+        bottom: 0;
+    }
     </style>
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -95,6 +187,7 @@ session_start();
         </div>
     </header>
 <div class="container">
+    <h2 class="text-light">Cadastro de Novo Usuário</h2>
 <?php
 $operacao = $_REQUEST["op"];
 if ($operacao == "Alterar") {

@@ -7,6 +7,110 @@ session_start();
 
 <head>
     <style>
+html {
+    background-color: #171C20;
+}
+
+body {
+    background-image: url('./img/FUNDODV.webp');
+    background-size: cover;
+    background-color: #171C20;
+    min-height: 100vh; /* Ensure body is at least viewport height */
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    margin: 0; /* Remove default body margin */
+}
+main {
+    flex-grow: 1; /* Allow main content to grow and push footer down */
+}
+
+p {
+    color: #FFFFFF;
+}
+
+header,
+footer {
+    color: #FFFFFF;
+    background-color: #171C20;
+    width: 100%;
+}
+.titulo {
+    justify-self: center;
+    font-size: 70px;
+    color: #FFFFFF;
+    width: 300px;
+}
+
+.logo {
+    position: relative; /* Be cautious with absolute positioning inside a flex container, might need adjustment */
+    left: 10%;
+    margin-right: auto;
+}
+
+.entrar,
+.cadastrar,
+.operacoes {
+    width: 200px;
+    font-size: 12px;
+    margin-left: auto;
+    right: 0; /* This 'right: 0' coupled with absolute positioning might need review */
+    background-color: #CDCDCD;
+}
+
+.tabela {
+    position: absolute; /* This absolute positioning might need review in the new layout */
+    bottom: 0;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+}
+
+#textos,
+.quemsomos,
+.pedaleconosco,
+.testemunhos {
+    color: #FFFFFF;
+    font-size: 16px;
+    /* height: 25%; */ /* Percentage heights can be tricky in flex column, consider padding/margins instead */
+    background-color: #171C20;
+    align-items: center;
+    margin: 1%;
+}
+
+.container {
+    background-color: #171C20;
+    padding: 20px;
+}
+
+.testemunhos {
+    background-color: #171C20;
+    position: relative;
+    margin: 1%;
+}
+
+.produto {
+    width: 200px;
+}
+
+
+.carousel {
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+}
+
+#botoes {
+    align-self: center;
+}
+
+    .footer2{
+        position: relative;
+        margin-top: auto;
+        bottom: 0;
+    }
+
     </style>
     <link href="estilos/reset.css" rel="stylesheet">
     <link href="estilos/estilo.css" rel="stylesheet">

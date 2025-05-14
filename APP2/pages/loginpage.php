@@ -7,20 +7,18 @@ session_start();
 
 <head>
     <style>
-body {
-    min-height: 100vh; /* Ensure body is at least viewport height */
-}
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html {
     background-color: #171C20;
+}
+
+body {
     background-image: url('../img/FUNDODV.webp');
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    display: flex;
-    flex-direction: column;
+    background-color: #171C20;
+    min-height: 100vh; /* Ensure body is at least viewport height */
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    margin: 0; /* Remove default body margin */
 }
 main {
     flex-grow: 1; /* Allow main content to grow and push footer down */

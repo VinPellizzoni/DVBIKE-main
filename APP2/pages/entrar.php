@@ -115,7 +115,7 @@ session_start();
                             <a href="../pages/login.php">Entrar</a>
                         </button>
                         <button class="cadastrar">
-                            <a href= class="text-light" "../view/formCliente.php">Cadastrar-se</a>
+                            <a href="../view/formCliente.php" >Cadastrar-se</a>
                         </button>
                 </div>
             </div>
