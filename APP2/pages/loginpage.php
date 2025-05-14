@@ -34,19 +34,8 @@ header,
 footer {
     color: #FFFFFF;
     background-color: #171C20;
-    height: fit-content; /* Keep your fixed footer height if desired */
-    min-height: 100px;
     width: 100%;
-    /* Remove position: absolute and bottom: 0 from footer */
 }
-/* Remove or adjust your existing footer styles that conflict */
-footer {
-    /* position: absolute; */ /* Remove this */
-    /* margin-top: auto; */ /* Remove this */
-    /* bottom: 0; */ /* Remove this */
-    /* Keep other desired footer styles like background, color, height, width */
-}
-
 .titulo {
     justify-self: center;
     font-size: 70px;
